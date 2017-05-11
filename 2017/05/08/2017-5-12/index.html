@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Mac配置 | OnePiece-Dragon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是使用MakeDown语法书写的 一、配置tomcat 下载tomcat解压在/Library中 可以添加环境变量 在用户目录中添加tomcat文件(mkfile -n 0b tomcat) ‘’’bash #!/bin/bash  case $1 in start) sh /Library/Tomcat/bin/startup.sh ;; stop) sh /Library/Tomcat/bi">
+  <meta name="description" content="这是使用MakeDown语法书写的 一、配置tomcat 下载tomcat解压在/Library中 可以添加环境变量 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)  12345678910111213141516171819#!/bin/bashcase $1 instart)sh /Library/Tomcat/bin/startup.sh;;stop)sh /Li">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac配置">
 <meta property="og:url" content="http://yoursite.com/2017/05/08/2017-5-12/index.html">
 <meta property="og:site_name" content="OnePiece-Dragon">
-<meta property="og:description" content="这是使用MakeDown语法书写的 一、配置tomcat 下载tomcat解压在/Library中 可以添加环境变量 在用户目录中添加tomcat文件(mkfile -n 0b tomcat) ‘’’bash #!/bin/bash  case $1 in start) sh /Library/Tomcat/bin/startup.sh ;; stop) sh /Library/Tomcat/bi">
-<meta property="og:updated_time" content="2017-05-11T16:51:26.000Z">
+<meta property="og:description" content="这是使用MakeDown语法书写的 一、配置tomcat 下载tomcat解压在/Library中 可以添加环境变量 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)  12345678910111213141516171819#!/bin/bashcase $1 instart)sh /Library/Tomcat/bin/startup.sh;;stop)sh /Li">
+<meta property="og:updated_time" content="2017-05-11T16:53:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac配置">
-<meta name="twitter:description" content="这是使用MakeDown语法书写的 一、配置tomcat 下载tomcat解压在/Library中 可以添加环境变量 在用户目录中添加tomcat文件(mkfile -n 0b tomcat) ‘’’bash #!/bin/bash  case $1 in start) sh /Library/Tomcat/bin/startup.sh ;; stop) sh /Library/Tomcat/bi">
+<meta name="twitter:description" content="这是使用MakeDown语法书写的 一、配置tomcat 下载tomcat解压在/Library中 可以添加环境变量 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)  12345678910111213141516171819#!/bin/bashcase $1 instart)sh /Library/Tomcat/bin/startup.sh;;stop)sh /Li">
   
     <link rel="alternative" href="/atom.xml" title="OnePiece-Dragon" type="application/atom+xml">
   
@@ -162,9 +162,9 @@
         <p>这是使用MakeDown语法书写的</p>
 <h2 id="一、配置tomcat"><a href="#一、配置tomcat" class="headerlink" title="一、配置tomcat"></a>一、配置tomcat</h2><ol>
 <li>下载tomcat解压在/Library中</li>
-<li><p>可以添加环境变量<br> 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)<br> ‘’’bash<br> #!/bin/bash</p>
-<p> case $1 in<br> start)<br> sh /Library/Tomcat/bin/startup.sh<br> ;;<br> stop)<br> sh /Library/Tomcat/bin/shutdown.sh<br> ;;<br> restart)<br> sh /Library/Tomcat/bin/shutdown.sh<br> sh /Library/Tomcat/bin/startup.sh<br> ;;<br> *)<br> echo “Usage: start|stop|restart”<br> ;;<br> esac</p>
-<p> exit 0<br> ‘’’<br> 之后把该tomcat文件添加入/Users/{用户名}/.bash_profile文件中类似<br> export PATH=${PATH}:/Users/wangyalong/PERSON_PATH<br> mysql也可通过这种方式：<br> export PATH=${PATH}:/usr/local/mysql/bin<br> 之后source /Users/{用户名}/.bash_profile 重新加载环境变量使修改生效</p>
+<li><p>可以添加环境变量<br> 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"></div><div class="line"><span class="keyword">case</span> <span class="variable">$1</span> <span class="keyword">in</span></div><div class="line">start)</div><div class="line">sh /Library/Tomcat/bin/startup.sh</div><div class="line">;;</div><div class="line">stop)</div><div class="line">sh /Library/Tomcat/bin/shutdown.sh</div><div class="line">;;</div><div class="line">restart)</div><div class="line">sh /Library/Tomcat/bin/shutdown.sh</div><div class="line">sh /Library/Tomcat/bin/startup.sh</div><div class="line">;;</div><div class="line">*)</div><div class="line"><span class="built_in">echo</span> “Usage: start|stop|restart”</div><div class="line">;;</div><div class="line"><span class="keyword">esac</span></div><div class="line"></div><div class="line"><span class="built_in">exit</span> 0</div></pre></td></tr></table></figure>
+<p> 之后把该tomcat文件添加入/Users/{用户名}/.bash_profile文件中类似<br> export PATH=${PATH}:/Users/wangyalong/PERSON_PATH<br> mysql也可通过这种方式：<br> export PATH=${PATH}:/usr/local/mysql/bin<br> 之后source /Users/{用户名}/.bash_profile 重新加载环境变量使修改生效</p>
 </li>
 <li><p>最后就可以直接tomcat start|stop|restart了！！！</p>
 </li>
