@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Mac环境配置 | OnePiece-Dragon</title>
+  <title>Android | OnePiece-Dragon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、配置tomcat 下载tomcat解压在/Library中 可以添加环境变量 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)  12345678910111213141516171819#!/bin/bashcase $1 instart)sh /Library/Tomcat/bin/startup.sh;;stop)sh /Library/Tomcat/bin/s">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Mac环境配置">
-<meta property="og:url" content="http://yoursite.com/2017/05/08/2017-5-12/index.html">
+  <meta name="description" content="Dragon的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Android">
+<meta property="og:url" content="http://yoursite.com/Android/second.html">
 <meta property="og:site_name" content="OnePiece-Dragon">
-<meta property="og:description" content="一、配置tomcat 下载tomcat解压在/Library中 可以添加环境变量 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)  12345678910111213141516171819#!/bin/bashcase $1 instart)sh /Library/Tomcat/bin/startup.sh;;stop)sh /Library/Tomcat/bin/s">
-<meta property="og:updated_time" content="2017-05-18T06:12:36.000Z">
+<meta property="og:description" content="Dragon的博客">
+<meta property="og:updated_time" content="2017-05-18T03:50:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac环境配置">
-<meta name="twitter:description" content="一、配置tomcat 下载tomcat解压在/Library中 可以添加环境变量 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)  12345678910111213141516171819#!/bin/bashcase $1 instart)sh /Library/Tomcat/bin/startup.sh;;stop)sh /Library/Tomcat/bin/s">
+<meta name="twitter:title" content="Android">
+<meta name="twitter:description" content="Dragon的博客">
   
     <link rel="alternative" href="/atom.xml" title="OnePiece-Dragon" type="application/atom+xml">
   
@@ -147,38 +147,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2017-5-12" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-undefined" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Mac环境配置
+      Android
     </h1>
   
 
         
-        <a href="/2017/05/08/2017-5-12/" class="archive-article-date">
-  	<time datetime="2017-05-08T10:09:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-08</time>
+        <a href="/Android/second.html" class="archive-article-date">
+  	<time datetime="2017-05-18T03:50:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、配置tomcat"><a href="#一、配置tomcat" class="headerlink" title="一、配置tomcat"></a>一、配置tomcat</h2><ol>
-<li>下载tomcat解压在/Library中</li>
-<li><p>可以添加环境变量<br> 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"></div><div class="line"><span class="keyword">case</span> <span class="variable">$1</span> <span class="keyword">in</span></div><div class="line">start)</div><div class="line">sh /Library/Tomcat/bin/startup.sh</div><div class="line">;;</div><div class="line">stop)</div><div class="line">sh /Library/Tomcat/bin/shutdown.sh</div><div class="line">;;</div><div class="line">restart)</div><div class="line">sh /Library/Tomcat/bin/shutdown.sh</div><div class="line">sh /Library/Tomcat/bin/startup.sh</div><div class="line">;;</div><div class="line">*)</div><div class="line"><span class="built_in">echo</span> “Usage: start|stop|restart”</div><div class="line">;;</div><div class="line"><span class="keyword">esac</span></div><div class="line"></div><div class="line"><span class="built_in">exit</span> 0</div></pre></td></tr></table></figure>
-<p> 之后把该tomcat文件添加入/Users/{用户名}/.bash_profile文件中类似<br> export PATH=${PATH}:/Users/wangyalong/PERSON_PATH<br> mysql也可通过这种方式：<br> export PATH=${PATH}:/usr/local/mysql/bin<br> 之后source /Users/{用户名}/.bash_profile 重新加载环境变量使修改生效</p>
-</li>
-<li><p>最后就可以直接tomcat start|stop|restart了！！！</p>
-<a id="more"></a>
-</li>
-</ol>
-<p>权限问题可以使用’mac权限：sudo chmod -R 777 [fileName]’<br><a href="http://www.cnblogs.com/xingxingLove/p/5304390.html" target="_blank" rel="external">参考链接1</a><br><a href="http://www.cnblogs.com/freeyiyi1993/p/3436368.html" target="_blank" rel="external">参考链接2</a></p>
-
+        
       
 
       
@@ -257,7 +246,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/08/2017-5-12/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/Android/second.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,25 +258,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2017/05/11/2017-5-11/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Linux服务器搭建
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/05/08/tags/随笔/test/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">随笔1</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 
 
@@ -298,8 +268,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2017/05/08/2017-5-12/", 
-    sourceId: "2017-5-12",
+    url: "http://yoursite.com/Android/second.html", 
+    sourceId: "undefined",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -333,7 +303,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

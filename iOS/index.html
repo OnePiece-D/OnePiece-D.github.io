@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>iOS | OnePiece-Dragon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Dragon的博客">
+  <meta name="description" content="你好">
 <meta property="og:type" content="website">
 <meta property="og:title" content="iOS">
 <meta property="og:url" content="http://yoursite.com/iOS/index.html">
 <meta property="og:site_name" content="OnePiece-Dragon">
-<meta property="og:description" content="Dragon的博客">
-<meta property="og:updated_time" content="2017-05-18T03:32:47.000Z">
+<meta property="og:description" content="你好">
+<meta property="og:updated_time" content="2017-05-18T06:38:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS">
-<meta name="twitter:description" content="Dragon的博客">
+<meta name="twitter:description" content="你好">
   
     <link rel="alternative" href="/atom.xml" title="OnePiece-Dragon" type="application/atom+xml">
   
@@ -42,7 +42,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #00FFFF"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -58,6 +58,10 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/iOS/">iOS</a></li>
+	        
+				<li><a href="/Android/">Android</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -67,11 +71,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -91,7 +91,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #00FFFF"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -108,6 +108,10 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -121,10 +125,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/iOS/">iOS</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/Android/">Android</a></li>
 		        
 				</ul>
 			</nav>
@@ -159,7 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h2>
       
 
       
@@ -322,11 +330,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
       
     
       
-      
-      
     
-      
-      
       
     
     
@@ -335,15 +339,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 100%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -407,25 +407,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://www.baidu.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>度娘</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">我是一个粉刷匠</div>
-  	  	
-    	</section>
     
   </div>
   

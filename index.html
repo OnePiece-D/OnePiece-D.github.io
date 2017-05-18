@@ -41,7 +41,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #00FFFF"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -57,6 +57,10 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/iOS/">iOS</a></li>
+	        
+				<li><a href="/Android/">Android</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -66,11 +70,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -90,7 +90,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #00FFFF"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -107,6 +107,10 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -120,10 +124,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/iOS/">iOS</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/Android/">Android</a></li>
 		        
 				</ul>
 			</nav>
@@ -166,27 +174,9 @@
 <li><p>解压<br> <code>tar zxvf apache-tomcat-7.0.tar.gz</code><br> <code>tar -zxvf jdk-7u76-linux-x64.tar.gz</code></p>
 </li>
 <li><p>重命名<br> 把tomcat解压后的文件夹重命名tomcat,jdk解压后的压缩包重命名jdk1.7</p>
-</li>
-<li><p>修改配置<br> 在linux根目录etc文件夹下有个profile文件,在内容末尾增加如下配置</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> JAVA_HOME=/usr/<span class="built_in">local</span>/jdk1.7</div><div class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre</div><div class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>验证jdk<br> 配种成功后，需要关闭终端，重新进入，输入Java -version，如果出现如下内容，则证明JDK安装成功。</p>
-</li>
-<li><p>启动tomcat<br> 切换到/usr/local/tomcat/bin下执行./startup.sh 命令启动成功的提示</p>
-</li>
-<li><p>打开网页<br> 在浏览器上输入123.206.81.30:8080(云服务器公网IP+端口)出现如下页面则安装成功</p>
-</li>
-<li><p>部署项目<br> 新建文件目录/home/www为网站存放目录，设置server.xml文件，在Host name=”localhost”处将appBase=的指向路径改为/home/www/web<br> 创建index.jsp至/home/www/web/ROOT，内容为：“My web!”   ,<br> 或者直接导出war包放到webapps下</p>
-</li>
-</ol>
-<p><a href="http://blog.csdn.net/qq877507054/article/details/51395843" target="_blank" rel="external">Linux云服务器安装tomcat</a></p>
-<h2 id="二、Linux安装MYSQL"><a href="#二、Linux安装MYSQL" class="headerlink" title="二、Linux安装MYSQL"></a>二、Linux安装MYSQL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div></pre></td><td class="code"><pre><div class="line">/usr/sbin/groupadd mysql 　　【添加mysql组】</div><div class="line"></div><div class="line">/usr/sbin/useradd <span class="_">-d</span> /var/lib/mysql <span class="_">-s</span> /sbin/nologin -g mysql mysql</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line">mkdir -p /usr/<span class="built_in">local</span>/src/mysql 【新建mysql文件夹】</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line"><span class="built_in">cd</span> / 　　【打开上传安装包的目录】</div><div class="line"></div><div class="line">mysql-5.6.30-linux-glibc2.5-x86_64.tar.gz 【上传安装包到服务器的根目录下】</div><div class="line"></div><div class="line">mv  mysql-5.6.30-linux-glibc2.5-x86_64.tar.gz  /usr/<span class="built_in">local</span>/src/mysql【根目录的安装包移动到文件夹下】</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line"><span class="built_in">cd</span>  /usr/<span class="built_in">local</span>/src/mysql　　【打开目录】</div><div class="line"></div><div class="line">tar -zxvf mysql-5.6.30-linux-glibc2.5-x86_64.tar.gz　　【解压安装包】</div><div class="line"></div><div class="line">cp mysql-5.6.30-linux-glibc2.5-x86_64 /usr/<span class="built_in">local</span>/mysql -r　　【复制文件】</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>　　【打开目录】</div><div class="line"></div><div class="line">chown -R mysql:mysql mysql/</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/mysql/scripts/　　【打开目录】</div><div class="line"></div><div class="line">./mysql_install_db --user=mysql --basedir=/usr/<span class="built_in">local</span>/mysql --datadir=/usr/<span class="built_in">local</span>/mysql/data【执行脚本】</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/mysql/support-files　　【打开目录】</div><div class="line"></div><div class="line">cp my-default.cnf /etc/my.cnf【复制文件到新的路径下及文件名】</div><div class="line"></div><div class="line">　　　　cp: overwrite `/etc/my.cnf<span class="string">'?Y【Y】</span></div><div class="line"></div><div class="line">cp mysql.server /etc/init.d/mysql【复制文件到新的路径下】</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line">vim /etc/profile【编辑软件运行环境】</div><div class="line">vim i（编辑一些内容） esc（进入normal） w（保存文件） q（不保存退出文件）</div><div class="line">###############################################################</div><div class="line">export MYSQL_HOME=/usr/local/mysql</div><div class="line">export PATH=$MYSQL_HOME/bin:$PATH </div><div class="line">###############################################################</div><div class="line">source /etc/profile</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line">chkconfig --add mysql</div><div class="line"></div><div class="line">chkconfig mysql on</div><div class="line"></div><div class="line"></div><div class="line">service mysql start</div><div class="line">/usr/local/mysql/bin/mysqladmin -u root password 'rootroot<span class="string">'【修改数据库root的密码】</span></div><div class="line"></div><div class="line"></div><div class="line">grant all privileges on tdcdb.* to 'root<span class="string">'@'</span>%<span class="string">' identified by '</span>rootroot<span class="string">' 【给mysql用户分配权限】</span></div><div class="line">flush privileges;</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line">vim /etc/sysconfig/iptables【编辑访问端口号】</div><div class="line">###############################################################</div><div class="line">-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT（添加3306的端口号）</div><div class="line">###############################################################</div><div class="line">service iptables restart</div><div class="line">netstat -ntlp</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line">mysql -u root -p （命令未找到使用： ln -s /usr/local/mysql/bin/mysql /usr/bin）</div><div class="line">create user 'tdc<span class="string">'@'</span>%<span class="string">' identified by '</span>P@ssw0rd<span class="string">';【创建数据库访问用户】</span></div><div class="line">create database if not exists `tdcdb`;【创建数据库】</div><div class="line"></div><div class="line">grant all privileges on tdcdb.* to 'tdc<span class="string">'@'</span>%<span class="string">' identified by '</span>P@ssw0rd<span class="string">';【给tdc用户分配访问密码】</span></div><div class="line">flush privileges;</div><div class="line"></div><div class="line"> </div><div class="line"></div><div class="line">vi /etc/my.cnf【编辑配置文件，支持语言设置】</div><div class="line">###############################</div><div class="line">[client]</div><div class="line">default-character-set=utf8</div><div class="line"></div><div class="line">[mysqld]</div><div class="line">character-set-server=utf8</div><div class="line"></div><div class="line">[mysql]</div><div class="line">default-character-set=utf8</div><div class="line">###############################</div><div class="line">service mysql stop【重新启动mysql服务】</div><div class="line">service mysql start</div></pre></td></tr></table></figure>
-<p><a href="http://www.cnblogs.com/JavaCoffee/p/5587578.html" target="_blank" rel="external">原文链接</a></p>
-<h2 id="三、安装JDK"><a href="#三、安装JDK" class="headerlink" title="三、安装JDK"></a>三、安装JDK</h2><p>1、新建一个jdk的安装目录，我这里是在/usr/local/下新建了java目录，我是使用WinSCP创建的文件夹，把 jdk-7u76-linux-x64.tar.gz压缩包从本地Windows系统中拖到Linux的/usr/local/java目录下，然后进行解压，命令如下：<br>    <code>tar xvf  jdk-7u76-linux-x64.tar.gz</code><br>2、解压完成后，进入到：<br>    <code>[root@NFC SERVER~]# cd /etc</code><br>    <code>[root@NFC SERVER etc]# vi profile</code><br>3、在profile文件的末尾加入如下命令：<br>    <code>JAVA_HOME = /home/jdk1.6.0_07</code><br>    <code>JAVA_JRE=${JAVA_HOME}/jre</code><br>    <code>PATH = ${JAVA_HOME}/bin:$PATH</code><br>    <code>CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib</code><br>    <code>Export JAVA_HOME JAVA_JRE PATH CLASSPATH</code></p>
-<p>编辑完之后按esc退出编辑，可以看到最下面的insert消失了，输入：wq，然后回车就能调到命令行。<br>执行：source /etc/profile是文件立即生效。</p>
-<p>重新启动系统后，输入：java -version，如果看到如下截图说明你的jdk已经安装成功了。</p>
-<p><a href="http://blog.csdn.net/xfz0330/article/details/52665350" target="_blank" rel="external">参考链接</a></p>
-
+        
+          <a class="article-more-a" href="/2017/05/11/2017-5-11/#more">更多 >></a>
+        
       
 
       
@@ -196,10 +186,6 @@
       
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/11/2017-5-11/">展开全文 >></a>
-        </p>
       
 
       
@@ -220,7 +206,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/08/2017-5-12/">Mac配置</a>
+      <a class="article-title" href="/2017/05/08/2017-5-12/">Mac环境配置</a>
     </h1>
   
 
@@ -233,18 +219,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是使用MakeDown语法书写的</p>
-<h2 id="一、配置tomcat"><a href="#一、配置tomcat" class="headerlink" title="一、配置tomcat"></a>一、配置tomcat</h2><ol>
+        <h2 id="一、配置tomcat"><a href="#一、配置tomcat" class="headerlink" title="一、配置tomcat"></a>一、配置tomcat</h2><ol>
 <li>下载tomcat解压在/Library中</li>
 <li><p>可以添加环境变量<br> 在用户目录中添加tomcat文件(mkfile -n 0b tomcat)</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"></div><div class="line"><span class="keyword">case</span> <span class="variable">$1</span> <span class="keyword">in</span></div><div class="line">start)</div><div class="line">sh /Library/Tomcat/bin/startup.sh</div><div class="line">;;</div><div class="line">stop)</div><div class="line">sh /Library/Tomcat/bin/shutdown.sh</div><div class="line">;;</div><div class="line">restart)</div><div class="line">sh /Library/Tomcat/bin/shutdown.sh</div><div class="line">sh /Library/Tomcat/bin/startup.sh</div><div class="line">;;</div><div class="line">*)</div><div class="line"><span class="built_in">echo</span> “Usage: start|stop|restart”</div><div class="line">;;</div><div class="line"><span class="keyword">esac</span></div><div class="line"></div><div class="line"><span class="built_in">exit</span> 0</div></pre></td></tr></table></figure>
 <p> 之后把该tomcat文件添加入/Users/{用户名}/.bash_profile文件中类似<br> export PATH=${PATH}:/Users/wangyalong/PERSON_PATH<br> mysql也可通过这种方式：<br> export PATH=${PATH}:/usr/local/mysql/bin<br> 之后source /Users/{用户名}/.bash_profile 重新加载环境变量使修改生效</p>
 </li>
 <li><p>最后就可以直接tomcat start|stop|restart了！！！</p>
-</li>
-</ol>
-<p>权限问题可以使用’mac权限：sudo chmod -R 777 [fileName]’<br><a href="http://www.cnblogs.com/xingxingLove/p/5304390.html" target="_blank" rel="external">参考链接1</a><br><a href="http://www.cnblogs.com/freeyiyi1993/p/3436368.html" target="_blank" rel="external">参考链接2</a></p>
-
+        
+          <a class="article-more-a" href="/2017/05/08/2017-5-12/#more">更多 >></a>
+        
       
 
       
@@ -254,10 +238,6 @@
       
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/08/2017-5-12/">展开全文 >></a>
-        </p>
       
 
       
@@ -278,7 +258,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/08/tags/随笔/test/">test1</a>
+      <a class="article-title" href="/2017/05/08/tags/随笔/test/">随笔1</a>
     </h1>
   
 
@@ -291,9 +271,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是使用MakeDown语法书写的<br>！<br>！<br>！</p>
-<h2 id="二级标题（-）"><a href="#二级标题（-）" class="headerlink" title="二级标题（#）"></a>二级标题（#）</h2><h3 id="三级标题（-）"><a href="#三级标题（-）" class="headerlink" title="三级标题（#）"></a>三级标题（#）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">使用&lt;bash&gt;命令写的该行</div></pre></td></tr></table></figure>
-<p>使用Writing写超链接: <a href="http://www.baidu.com" target="_blank" rel="external">Writing</a></p>
+        <p>-&gt;tags-&gt;随笔-&gt;1</p>
 
       
 
@@ -304,10 +282,6 @@
       
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/08/tags/随笔/test/">展开全文 >></a>
-        </p>
       
 
       
@@ -372,11 +346,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
       
     
       
-      
-      
     
-      
-      
       
     
     
@@ -385,15 +355,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 100%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -457,25 +423,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://www.baidu.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>度娘</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">我是一个粉刷匠</div>
-  	  	
-    	</section>
     
   </div>
   

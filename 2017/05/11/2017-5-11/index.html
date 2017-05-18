@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/11/2017-5-11/index.html">
 <meta property="og:site_name" content="OnePiece-Dragon">
 <meta property="og:description" content="一、安装tomcat 上传 把下载好的tomcat压缩包(apache-tomcat-7.0.tar.gz)和jdk(jdk-7u76-Linux-x64.tar.gz)压缩包上传到/usr/local目录下  解压 tar zxvf apache-tomcat-7.0.tar.gz tar -zxvf jdk-7u76-linux-x64.tar.gz  重命名 把tomcat解压后的文件夹重命">
-<meta property="og:updated_time" content="2017-05-11T05:36:39.000Z">
+<meta property="og:updated_time" content="2017-05-18T06:11:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux服务器搭建">
 <meta name="twitter:description" content="一、安装tomcat 上传 把下载好的tomcat压缩包(apache-tomcat-7.0.tar.gz)和jdk(jdk-7u76-Linux-x64.tar.gz)压缩包上传到/usr/local目录下  解压 tar zxvf apache-tomcat-7.0.tar.gz tar -zxvf jdk-7u76-linux-x64.tar.gz  重命名 把tomcat解压后的文件夹重命">
@@ -42,7 +42,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #00FFFF"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -58,6 +58,10 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/iOS/">iOS</a></li>
+	        
+				<li><a href="/Android/">Android</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -67,11 +71,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -91,7 +91,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #00FFFF"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -108,6 +108,10 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -121,10 +125,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/iOS/">iOS</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/Android/">Android</a></li>
 		        
 				</ul>
 			</nav>
@@ -165,6 +173,7 @@
 <li><p>解压<br> <code>tar zxvf apache-tomcat-7.0.tar.gz</code><br> <code>tar -zxvf jdk-7u76-linux-x64.tar.gz</code></p>
 </li>
 <li><p>重命名<br> 把tomcat解压后的文件夹重命名tomcat,jdk解压后的压缩包重命名jdk1.7</p>
+ <a id="more"></a>
 </li>
 <li><p>修改配置<br> 在linux根目录etc文件夹下有个profile文件,在内容末尾增加如下配置</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> JAVA_HOME=/usr/<span class="built_in">local</span>/jdk1.7</div><div class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre</div><div class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
@@ -280,7 +289,7 @@
   
   
     <a href="/2017/05/08/2017-5-12/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac配置</div>
+      <div class="article-nav-title">Mac环境配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -358,11 +367,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
       
     
       
-      
-      
     
-      
-      
       
     
     
@@ -371,15 +376,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 100%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -443,25 +444,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://www.baidu.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>度娘</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">我是一个粉刷匠</div>
-  	  	
-    	</section>
     
   </div>
   
