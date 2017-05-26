@@ -168,12 +168,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、安装tomcat"><a href="#一、安装tomcat" class="headerlink" title="一、安装tomcat"></a>一、安装tomcat</h2><ol>
+        <h2 id="一、安装jdk"><a href="#一、安装jdk" class="headerlink" title="一、安装jdk"></a>一、安装jdk</h2><ol>
+<li>解压文件<br> <code>tar -zxaf [fileName]</code></li>
+<li>移动文件<br> <code>mv [fileName] [file_PATH]</code></li>
+<li><p>设置环境变量<br> <code>vi /etc/profile</code><br> 在profile中添加如下内容</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#set java environment</span></div><div class="line">JAVA_HOME=/usr/java/jdk1.7.0_79</div><div class="line">JRE_HOME=/usr/java/jdk1.7.0_79/jre</div><div class="line">CLASS_PATH=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar:<span class="variable">$JRE_HOME</span>/lib</div><div class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$JRE_HOME</span>/bin</div><div class="line"><span class="built_in">export</span> JAVA_HOME JRE_HOME CLASS_PATH PATH</div></pre></td></tr></table></figure>
+<p> 让修改生效:<br> <code>source /etc/profile</code></p>
+</li>
+<li>验证JDK有效性<br> <code>java -version</code> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">java version <span class="string">"1.7.0_79"</span></div><div class="line">Java(TM) SE Runtime Environment (build 1.7.0_79-b15)</div><div class="line">Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><a href="http://www.linuxidc.com/Linux/2016-09/134941.htm" target="_blank" rel="external">参考链接</a></p>
+<h2 id="二、安装tomcat"><a href="#二、安装tomcat" class="headerlink" title="二、安装tomcat"></a>二、安装tomcat</h2><ol>
 <li><p>上传<br> 把下载好的tomcat压缩包(apache-tomcat-7.0.tar.gz)和jdk(jdk-7u76-Linux-x64.tar.gz)压缩包上传到/usr/local目录下</p>
 </li>
 <li><p>解压<br> <code>tar zxvf apache-tomcat-7.0.tar.gz</code><br> <code>tar -zxvf jdk-7u76-linux-x64.tar.gz</code></p>
 </li>
-<li><p>重命名<br> 把tomcat解压后的文件夹重命名tomcat,jdk解压后的压缩包重命名jdk1.7</p>
+<li><p>重命名</p>
         
           <a class="article-more-a" href="/2017/05/11/2017-5-11/#more">更多 >></a>
         
